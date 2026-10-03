@@ -1,0 +1,4 @@
+ccxt
+pandas
+requests
+git+https://github.com/twopirllc/pandas-ta.git

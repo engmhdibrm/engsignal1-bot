@@ -1,0 +1,5 @@
+requests
+pandas
+ time
+ ccxt
+requests

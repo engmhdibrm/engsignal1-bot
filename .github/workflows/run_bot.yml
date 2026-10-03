@@ -2,28 +2,27 @@ name: Run Crypto Bot Hourly
 
 on:
   schedule:
-    # يعمل تلقائياً في الدقيقة 0 من كل ساعة
     - cron: '0 * * * *'
-  workflow_dispatch: # يتيح لك تشغيله يدوياً متى شئت للتجربة
+  workflow_dispatch:
 
 jobs:
   run-bot:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
 
-    - name: Install dependencies
-      run: |
-        pip install -r requirements.txt
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
 
-    - name: Run bot script
-      env:
-        TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-      run: |
-        python bot.py
+      - name: Run bot script
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+        run: |
+          python bot.py

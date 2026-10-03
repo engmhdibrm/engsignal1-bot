@@ -1,5 +1,4 @@
-requests
+ccxt
 pandas
- time
- ccxt
+pandas_ta
 requests

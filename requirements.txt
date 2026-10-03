@@ -1,5 +1,4 @@
 requests
-engsignal-bot
 pandas
  time
  ccxt

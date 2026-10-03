@@ -1,0 +1,6 @@
+requests
+engsignal-bot
+pandas
+ time
+ ccxt
+requests
